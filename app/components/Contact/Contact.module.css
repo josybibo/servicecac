@@ -1,0 +1,179 @@
+ .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background-image: url('https://i.postimg.cc/qMZ6ChvW/temp-Image-Rp-Hi-Rt.avif');
+    background-size: cover;   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(135, 71, 6);
+    animation: backgroundAnimation 20s infinite alternate;
+}
+
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.roundLogo {
+    border-radius: 75%;
+}
+
+.companyName {
+    font-family: 'Impact', sans-serif;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    margin-left: 20px;
+    animation: move 3s ease-in-out infinite alternate;
+    font-size: 60px; /* Increase the font size */
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateX(20px) rotate(10deg);
+    }
+    100% {
+        transform: translateX(0px) rotate(0deg);
+    }
+}
+
+.c { color: #f19707; }
+.a { color: #050505; }
+.c2 { color: #f1f1f7; }
+
+.contactForm {
+    max-width: 700px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    color: #333;
+    margin: 25px;
+}
+
+.contactForm h2 {
+    font-size: 48px; /* Adjust the size as needed */
+    font-weight: bold; /* Makes the text bold */
+    text-align: center;
+    color: coral;
+    margin-bottom: 20px;
+}
+
+.inputBox {
+    margin-top: 20px;
+}
+.label {
+    font-weight: bold;
+  }
+.field {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #ddd;
+    outline: none;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    margin-top: 8px;
+}
+
+
+
+.mess {
+    height: 200px;
+    resize: none;
+}
+
+.contactForm button {
+    width: 100%;
+    height: 55px;
+    background: rgba(6, 74, 86, 0.667);
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    margin-top: 25px;
+    transition: .5s;
+}
+
+.contactForm button:hover {
+    background: rgb(88, 1, 37);
+}
+
+@media (max-width: 480px) {
+    .contactForm {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .contactForm h2 {
+        font-size: 20px;
+    }
+
+    .field {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .contactForm button {
+        height: 45px;
+        font-size: 14px;
+    }
+}
+
+.socialMedia {
+  display: flex;
+  justify-content: flex-end; /* Alignement à droite */
+  margin-top: 20px;
+  font-size: 18px; /* Réduction de la taille des icônes */
+}
+
+@media (max-width: 768px) {  /* For screens less than 768px wide */
+    .contact {
+        flex-direction: column-reverse;  /* Reverse order on smaller screens */
+        justify-content: space-between; /* More space between content and footer */
+    }
+}
+
+@media (max-width: 480px) {  /* For screens less than 480px wide */
+    .contact .companyName {  /* Adjust font size for very small screens */
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 768px) {  /* For screens less than 768px wide */
+    .contactForm {
+        max-width: 90%;  /* Increase form width for better utilization of space */
+    }
+}
+
+@media (max-width: 480px) {  /* For screens less than 480px wide */
+    .contactForm h2 {
+        font-size: 32px;  /* Reduce heading size for better fit */
+    }
+
+    .field, .mess {
+        font-size: 14px;  /* Reduce input and textarea font sizes */
+    }
+}
